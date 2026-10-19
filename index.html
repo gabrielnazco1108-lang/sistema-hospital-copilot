@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Hospitalaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Gestión Hospitalaria</h1>
+        
+        <section>
+            <h2>Doctores Disponibles</h2>
+            <div id="lista-doctores"></div>
+        </section>
+
+        <section>
+            <h2>Registro de Pacientes</h2>
+            <form id="form-paciente">
+                <input type="text" id="nombre-paciente" placeholder="Nombre completo" required>
+                <input type="text" id="cedula-paciente" placeholder="Cédula (números)" pattern="[0-9]+" required>
+                <button type="submit">Registrar Paciente</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Agendar Cita</h2>
+            <form id="form-cita">
+                <select id="select-paciente" required></select>
+                <select id="select-doctor" required></select>
+                <input type="time" id="hora-cita" required>
+                <button type="submit">Agendar Cita</button>
+            </form>
+            <p id="mensaje-error" style="color: red; font-weight: bold;"></p>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
